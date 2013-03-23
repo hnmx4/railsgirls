@@ -1,0 +1,46 @@
+<div id="main">
+  <table id="canvas"></table>
+</div>
+<div id="side">
+  <p>
+    <input type="button" value="Clear" id="clear" />
+    <input type="button" value="Save" id="save" />
+    <table id="palette"></table>
+  </p>
+  <div class="text">
+    <p class="ex">
+      Clear : エディタ初期化<br />
+      パレット : サイコロの目を変える
+    </p>
+    * サイコロの目でドット絵が描けます<br />
+    * 上のパレットから使うサイコロの目を選びましょう<br />
+    * 保存したいときはスクリーンショットを撮りましょう<br />
+    <br />
+    + 動作確認 : GoogleChrome / Internetexplorer
+  </div>
+  <!-- form -->
+  <p>
+    <%= form_for(Dice.new) do |f| %>
+
+    <div class="field">
+      <%= f.label :picture %><br />
+      <%= f.file_field :picture %>
+    </div>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :comment %><br />
+      <%= f.text_area :comment %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <% end %>
+  </p>
+  <p>
+    <%= link_to "index", dices_path %>
+  </p>
+
+</div>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Picture:</b>
+  <%= @dice.picture %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @dice.name %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @dice.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_dice_path(@dice) %> |
+<%= link_to 'Back', dices_path %>

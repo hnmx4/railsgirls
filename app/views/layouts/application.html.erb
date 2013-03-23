@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DiceDrawer</title>
+  <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">さいころろん</a>
+      <ul class="nav">
+        <li class="active"><a href="/dices">さいころろろろろろん</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="contents">
+  <%= yield %>
+</div>
+
+<footer>
+  <div class="container">
+    Copyrightc2013 <a href="http://twitter.com/kokusou0628" target="_blank">@kokuosu0628</a> All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
